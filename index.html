@@ -25,6 +25,11 @@
           <img id="cover" src="assets/images/AlbumCover.jpg">
       </a-assets>
 
+      <a-entity id="player" collider-check>
+      <a-entity raycaster="objects: .collidable" position="0 -0.9 0" rotation="90 0 0"></a-entity>
+      </a-entity>
+      <a-entity class="collidable" geometry="primitive: box" position="1 0 0"></a-entity>
+      
       <a-sky id="image-360" radius="1000" src="#space"></a-sky>
       <!--<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>-->
       
