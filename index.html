@@ -24,11 +24,12 @@
           <img id="space" src="assets/images/SPACE-1.jpg">
           <img id="cover" src="assets/images/AlbumCover.jpg">
       </a-assets>
-
-      <!--cam and cursor
-      <a-camera>
-        <a-cursor color="#FFFF00"/>
-      </a-camera>-->
+      
+      <a-entity id="rig">
+        <a-entity camera position="0 2 0" look-controls wasd-controls>
+          <a-cursor id="cursor" raycaster fuse="true" fusetimeout="3000"></a-cursor>
+        </a-entity>
+      </a-entity>
         
       <!--environment-->
       <a-sky id="image-360" radius="1000" src="#space"></a-sky>
