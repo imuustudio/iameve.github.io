@@ -31,7 +31,9 @@
       <a-entity class="collidable" geometry="primitive: box" position="1 0 0"></a-entity>
       
       <a-sky id="image-360" radius="1000" src="#space"></a-sky>
-      <!--<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>-->
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9">
+        <a-animation attribute="rotation" repeat="indefinite" tp="0 360 0"></a-animation>
+      </a-box>
       
       <a-image src="#cover" position="-3 2 -7" scale="3 3 3"></a-image>
      
