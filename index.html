@@ -37,7 +37,9 @@
      
       <a-link href="https://www.iameveami.com/"  image="#space"></a-link>
       
-      <a-entity gltf-model="#door" position="0 20 -50" scale="1 1 1" ></a-entity>
+      <a-entity gltf-model="#door" position="0 20 -50" scale="1 1 1" >
+        <a-animation attribute="rotation" repeat="indefinite" tp="0 360 0"></a-animation>
+      </a-entity>
       <a-entity gltf-model="#door2" position="-50 50 -100" scale="1 1 1" ></a-entity>
     </a-scene>
   </body>
