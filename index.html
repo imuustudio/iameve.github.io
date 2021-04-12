@@ -18,6 +18,8 @@
       cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
       info-message="htmlSrc: #messageText">
       <a-assets>
+        <img id="space" src="assets/images/SPACE-1.jpg">
+        
         <a-asset-item id="messageText" src="message.html"></a-asset-item>
         <!--
           Image source: http://www.ghibli.jp/works/kazetachinu/#frame&gid=1&pid=1
@@ -58,7 +60,8 @@
           position="0 0.495 0.002"
          ></a-mixin>
       </a-assets>
-
+<!--scene elements downblow ------------------------->
+      <a-sky id="image-360" radius="1000" src="#space"></a-sky>
       <a-entity
         id="background"
         position="0 0 0"
