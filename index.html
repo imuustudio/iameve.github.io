@@ -51,7 +51,16 @@
           material="src: #ponyo; shader: flat; transparent: true"
           position="0 0.495 0.002"
          ></a-mixin>
+        
+         <a-asset-item id="door" src="assets/red_door.gltf" ></a-asset-item>
+         <a-asset-item id="door2" src="assets/red_door.gltf" ></a-asset-item>
       </a-assets>
+      
+      
+      <a-entity gltf-model="#door" position="0 20 -50" scale="1 1 1" >
+        <a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation>
+      </a-entity>
+      <a-entity gltf-model="#door2" position="-50 50 -100" scale="1 1 1" ></a-entity>
       
       <!--scene elements downblow ------------------------->
       <a-sky id="image-360" radius="1000" src="#space"></a-sky>
@@ -73,7 +82,7 @@
         <a-entity
           id="fadeBackground"
           geometry="primitive: sphere; radius: 2.5"
-          material="color: red; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
+          material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
         </a-entity> 
       </a-entity>
 
