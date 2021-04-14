@@ -6,6 +6,7 @@
     <title>IAMEVE-Archetypes</title>
     <meta name="description" content="Laser input UI • A-Frame">
     <script src="aframe-master.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> 
     <!-- <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>-->
     <script src="info-message.js"></script>
     <script src="highlight.js"></script>
@@ -58,7 +59,7 @@
       
       
       <a-entity gltf-model="#door" position="0 20 -50" scale="1 1 1" 
-                animation__up="dur:1000; easing:easeInOutSine; from: 20; to: 25; loop:-1; property:object3D.position.y;"
+                animation__up="property:position; from: 0 20 -50; to: 0 25 -50; loop: true; dur:1000; easing:easeInOutSine; "
                 >
       </a-entity>
       <a-entity gltf-model="#door2" position="-50 50 -100" scale="1 1 1" ></a-entity>
