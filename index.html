@@ -60,15 +60,18 @@
          <a-asset-item id="door2" src="assets/red_door.gltf" ></a-asset-item>
         
          <a-timeline id="doorTimeline">
-            <a-timeline-animation select="#door" name="up"></a-timeline-animation>
-            <a-timeline-animation select="#door" name="dw"></a-timeline-animation>
+            <a-timeline-animation select="#dd" name="up"></a-timeline-animation>
+            <a-timeline-animation select="#dd" name="dw"></a-timeline-animation>
          </a-timeline>
       </a-assets>
       
+      <a-box id="dd"
+             animation__up="property:position; from: 0 20 -50; to: 0 25 -50; loop: true; dur:1000; easing:easeInOutSine;"
+             animation__dw="property:position; from: 0 25 -50; to: 0 20 -50; loop: true; dur:1000; easing:easeInOutSine;">
+        </a-box>
       
       <a-entity gltf-model="#door" position="0 20 -50" scale="1 1 1" 
-                animation__up="property:position; from: 0 20 -50; to: 0 25 -50; loop: true; dur:1000; easing:easeInOutSine;"
-                animation__dw="property:position; from: 0 25 -50; to: 0 20 -50; loop: true; dur:1000; easing:easeInOutSine;"
+                
                 >
       </a-entity>
       <a-entity gltf-model="#door2" position="-50 50 -100" scale="1 1 1" ></a-entity>
