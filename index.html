@@ -6,6 +6,7 @@
     <title>IAMEVE-Archetypes</title>
     <meta name="description" content="Laser input UI • A-Frame">
     <script src="aframe-master.js"></script>
+    <script src="https://unpkg.com/aframe-animation-timeline-component@2.0.0/dist/aframe-animation-timeline-component.min.js"></script>
     <!--<script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>-->
     <!-- <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>-->
     <script src="info-message.js"></script>
@@ -16,7 +17,9 @@
     <a-scene
       environment
       cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
-      info-message="htmlSrc: #messageText">
+      info-message="htmlSrc: #messageText"
+      animation-timeline__1="timeline: #doorTimeline; loop:true"
+      >
       <a-assets>
         <img id="space" src="assets/images/SPACE-1.jpg">
         
@@ -55,11 +58,17 @@
         
          <a-asset-item id="door" src="assets/red_door.gltf" ></a-asset-item>
          <a-asset-item id="door2" src="assets/red_door.gltf" ></a-asset-item>
+        
+         <a-timeline id="doorTimeline">
+            <a-timeline-animation select="#door" name="up"></a-timeline-animation>
+            <a-timeline-animation select="#door" name="dw"></a-timeline-animation>
+         </a-timeline>
       </a-assets>
       
       
       <a-entity gltf-model="#door" position="0 20 -50" scale="1 1 1" 
-                animation__up="property:position; from: 0 20 -50; to: 0 25 -50; loop: true; dur:1000; easing:easeInOutSine; "
+                animation__up="property:position; from: 0 20 -50; to: 0 25 -50; loop: true; dur:1000; easing:easeInOutSine;"
+                animation__dw="property:position; from: 0 25 -50; to: 0 20 -50; loop: true; dur:1000; easing:easeInOutSine;"
                 >
       </a-entity>
       <a-entity gltf-model="#door2" position="-50 50 -100" scale="1 1 1" ></a-entity>
