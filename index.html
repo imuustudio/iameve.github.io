@@ -5,9 +5,9 @@
     <title>IAMEVE-Archetypes</title>
     <meta name="description" content="Laser input UI • A-Frame">
     <script src="aframe-master.js"></script>
-    <!--
+    
     <script src="https://unpkg.com/aframe-animation-timeline-component@2.0.0/dist/aframe-animation-timeline-component.min.js"></script>
-    -->
+    
     <!--<script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>-->
     <!--<script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>-->
     <script src="info-message.js"></script>
@@ -16,9 +16,9 @@
   </head>
   <body>
     <a-scene 
-      environment
       cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
       info-message="htmlSrc: #messageText"
+      animation-timeline__1="timeline: #doorTimeline; loop:true"
       >
       <a-assets>
         <img id="space" src="assets/images/SPACE-1.jpg">
@@ -56,14 +56,14 @@
           position="0 0.495 0.002"
          ></a-mixin>
         
-         <!--<a-asset-item id="door" src="assets/red_door.gltf" ></a-asset-item>-->
+         
          <a-asset-item id="door2" src="assets/red_door.gltf" ></a-asset-item>
-         <!--
+         
          <a-timeline id="doorTimeline">
             <a-timeline-animation select="#dd" name="up"></a-timeline-animation>
             <a-timeline-animation select="#dd" name="dw"></a-timeline-animation>
          </a-timeline>
-         -->
+         
       </a-assets>
 
       
@@ -76,7 +76,7 @@
       
       <!--scene elements downblow ------------------------->
       <a-sky id="image-360" radius="1000" src="#space"></a-sky>
-      <!--
+     
       <a-entity
         id="background"
         position="0 0 0"
@@ -85,7 +85,7 @@
         scale="0.001 0.001 0.001"
         visible="false" class="raycastable">
       </a-entity>
--->
+
 
       <a-entity
         position="0 1.6 0"
